@@ -1,0 +1,125 @@
+﻿<html>
+<body>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="FileServer">
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Source Default</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Certificate Default</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Signature Default</p>
+            </div>
+        </div>
+        <div style="line-height: 23px;">
+            <text>Page No. : &nbsp;&nbsp;&nbsp;&nbsp;</text>
+            <label>
+                <input type="text" class="e-input" style="width: 98%" id="streamipage" value=""
+                       name="streamipage">
+            </label>
+        </div>
+
+        <div class="form-group">
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td align="left" width="10%">
+                        <span id="label1">X</span>
+                    </td>
+                    <td align="left" width="20%">
+                        <div style="line-height: 23px;">
+                            <label>
+                                <input type="text" class="e-input" id="x" value="360" name="x" onkeyup="Validate('x')">
+                            </label>
+                        </div>
+                    </td>
+                    <td align="left" width="20%">
+                        <div>
+                            <span id="xvalidator" style="display: none"></span>
+                        </div>
+                    </td>
+                    <td align="left" width="10%">
+                        <span id="label1">Y</span>
+                    </td>
+                    <td align="left" width="20%">
+                        <div style="line-height: 23px;">
+                            <label>
+                                <input type="text" class="e-input" id="y" value="700" name="y" onkeyup="Validate('y')">
+                            </label>
+                        </div>
+                    </td>
+                    <td align="left" width="20%">
+                        <div>
+                            <span id="yvalidator" style="display: none"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" width="10%">
+                        <span id="label1">Width</span>
+                    </td>
+                    <td align="left" width="20%">
+                        <div style="line-height: 23px;">
+                            <label>
+                                <input type="text" class="e-input" id="width" value="200" name="width" onkeyup="Validate('width')">
+                            </label>
+                        </div>
+                    </td>
+                    <td align="left" width="20%">
+                        <div>
+                            <span id="widthvalidator" style="display: none"></span>
+                        </div>
+                    </td>
+                    <td align="left" width="10%">
+                        <span id="label1">Height</span>
+                    </td>
+                    <td align="left" width="20%">
+                        <div style="line-height: 23px;">
+                            <label>
+                                <input type="text" class="e-input" id="height" value="100" name="height" onkeyup="Validate('height')">
+                            </label>
+                        </div>
+                    </td>
+                    <td align="left" width="20%">
+                        <div>
+                            <span id="heightvalidator" style="display: none"></span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="line-height: 23px;">
+            <span id="label1">Reason</span>
+            <label>
+                <input type="text" class="e-input" style="width: 98%; margin-left: 117px" id="streamReason" value=""
+                       name="streamReason">
+            </label>
+        </div>
+        <div style="line-height: 23px;">
+            <span id="label1">Contact</span>
+            <label>
+                <input type="text" class="e-input" style="width: 98%; margin-left: 116px" id="streamContact" value=""
+                       name="streamContact">
+            </label>
+        </div>
+        <div style="line-height: 23px;">
+            <span id="label1">Location</span>
+            <label>
+                <input type="text" class="e-input" style="width: 100%; margin-left: 111px" id="streamLocation" value=""
+                       name="streamLocation">
+            </label>
+        </div>
+
+        <div class="form-group">
+            <input name="streamsubmit" class="e-btn" type="submit" id="streamsubmit" value="Create Sign PDF" formaction=@Url.Action("FileServer") formmethod="post" style="width: 150px; text-transform:capitalize" />
+        </div>
+
+    </form>
+</body>
+</html>
+
